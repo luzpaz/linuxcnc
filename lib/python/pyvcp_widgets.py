@@ -1,4 +1,4 @@
-#22nov allowed range color chganges to border when dwgf or imgf are used
+#22nov allowed range color changes to border when dwgf or imgf are used
 #
 # this file ius found in /home/tomp/linuxnc-barwidgets/configs/tomp/nuPyvcpBars
 # fname is   pyvcp_widgets18nov2023.py
@@ -1310,12 +1310,12 @@ class pyvcp_bar(Canvas):
                 raise ValueError
         except ValueError:
             print( "canvas or border dimension <= 0")
-            sys.exit(1) # copied from othe classes
+            sys.exit(1) # copied from other classes
         #
         self.min_ = min_
         self.max_ = max_
         #
-        # allow ommision of origin tag, defaulting to min_
+        # allow omission of origin tag, defaulting to min_
         if origin == None:
             self.origin =  self.min_
         else:
@@ -1341,7 +1341,7 @@ class pyvcp_bar(Canvas):
                 raise ValueError
         except ValueError:
             print( "layout tag requires one of e c w n s 0 None")
-            sys.exit(1) # 09noc copied from othe classes
+            sys.exit(1) # 09noc copied from other classes
         #
         if(layout == None ): 
             if(orient == "Vert"):
@@ -1358,7 +1358,7 @@ class pyvcp_bar(Canvas):
                     raise ValueError
         except ValueError:
             print( "orient Vert requires one of e c w 0 None")
-            sys.exit(1) # 09noc copied from othe classes
+            sys.exit(1) # 09noc copied from other classes
         #
         # disallow layout e w for orient Horz
         try: 
@@ -1367,7 +1367,7 @@ class pyvcp_bar(Canvas):
                     raise ValueError
         except ValueError:
             print( "orient Horz requires one of n c s 0 None")
-            sys.exit(1) # 09noc copied from othe classes
+            sys.exit(1) # 09noc copied from other classes
         #
         # the border is the rect outling the elevator shaft/corridor
         self.borderX0=0
@@ -1375,7 +1375,7 @@ class pyvcp_bar(Canvas):
         self.borderX1=0
         self.borderY1=0
         #
-        # tyhe thumb is rectangle indicating the value in the border
+        # the thumb is rectangle indicating the value in the border
         self.thumbX0=0
         self.thumbY0=0
         self.thumbX1=0
@@ -1462,7 +1462,7 @@ class pyvcp_bar(Canvas):
         #
         # ###########################################
         #  common text size calcs    
-        #  determin pixel width of texts
+        #  determine pixel width of texts
         #   bounding box method should be exact correct 
         #   but i had to resort to paddings 
         #   I tested many fonts and heights
@@ -1532,7 +1532,7 @@ class pyvcp_bar(Canvas):
                     )
             #
             # ###########################################        
-            #   only layout 0 allows dwgf OR imgf thumbs ( not mandetory)
+            #   only layout 0 allows dwgf OR imgf thumbs (not mandatory)
             # ###########################################        
             #
             # if no text wanted (layout==0) and (no imf and no dwgf), t0hen show rect thumb
@@ -1608,15 +1608,15 @@ class pyvcp_bar(Canvas):
             #  else layouit != ''0'  and
             #        and (neither imgf nor dwgf are wanted)
             # #############################################
-            # the tag 'orient' can be 'Vert' or 'Horz' or None ( deaults to Horz)
+            # the tag 'orient' can be 'Vert' or 'Horz' or None (defaults to Horz)
             # re bars: lielty arcs can be done, but I stop dev for now 25oct2023
             #
-            #15 make all pins allways ( any orient any layout)
+            #15 make all pins always (any orient any layout)
             if(self.layout == "0" )and((imgf==None)and(dwgf==None)): 
                 pycomp.newpin(halpin+".minpin", HAL_FLOAT, HAL_OUT)
                 pycomp.newpin(halpin+".maxpin", HAL_FLOAT, HAL_OUT)
                 pycomp.newpin(halpin+".refpin", HAL_FLOAT, HAL_OUT)
-                # these 3 pins wont chnage, only need to be set in init()
+                # these 3 pins wont change, only need to be set in init()
                 pycomp[halpin+'.minpin']=self.min_
                 pycomp[halpin+'.maxpin']=self.max_ 
                 pycomp[halpin+'.refpin']=self.origin
@@ -1666,7 +1666,7 @@ class pyvcp_bar(Canvas):
                     # VERT layout TEXT X posns  the texts can be e(ast) c(enter) or w(est)
                     # #####################################
                     # 09nov to get texts align left or right requires fudge
-                    #   i used bbox arounf the text but bot accurate, so fudge
+                    #   i used bbox around the text but bot accurate, so fudge
                     if(self.layout == 'e'): 
                         tmp = canvas_width
                         txMin = tmp - twMin + 26
@@ -1796,7 +1796,7 @@ class pyvcp_bar(Canvas):
             #
             # ############################################
             # 12nov
-            # ??? what @ layou == 0? for Vert ANND for Hoerz???
+            # ??? what @ layout == 0? for Vert AND for Horz???
             # ############################################
             #
             # ############################################
@@ -1824,7 +1824,7 @@ class pyvcp_bar(Canvas):
             #
             # end of   if orient == 'Vert':
             #
-    # NB for vert X0 Y0 X1 alreay set
+    # NB for vert X0 Y0 X1 already set
     #        horz X0 Y0 Y1 already set
     #   this leaves ony 1 ord to calculate
     #   the remaining ordinate is done ion func 'update'
@@ -1940,7 +1940,7 @@ class pyvcp_bar(Canvas):
                 #
                 if(self.origin == self.min_):
                     #09nov constrain thumbX1 to limits min_ max_
-                    #  while accomodating for 
+                    #  while accommodating for 
                     #    padding between left of canvas to left of bar
                     if((self.value + littlebit)>=self.max_):
                         self.thumbX1 = 0
@@ -1984,7 +1984,7 @@ class pyvcp_bar(Canvas):
             # ##################################################################
             #
             #11nov there is no xor in python
-            # BUT if both itens evaluate to booleans  ( a !- b) is ~ xot
+            # BUT if both items evaluate to booleans  ( a !- b) is ~ xot
             #  one item must be true and the other false
             #  soL  use (caseA) != (vaseB) to get 'xor' equiv
             #

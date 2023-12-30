@@ -3,7 +3,7 @@
 <!-- the dwg tag should get a value of a local file -->
 <!-- local means in same dir as pyvcp_widgets.py -->
 <!-- /usr/lib/python3/dist-packages/pyvcp_widgets.py -->
-<!-- 1 ) test existance iof tag is harmless -->
+<!-- 1 ) test existence iof tag is harmless -->
 <!-- 25 oct chg myfont from Arial to Fixed   no help sti;; missalligned to 'proc5'-->
 <!-- 30 oct test Arial vd Fixed -->
 <!-- ng for myfont    "'TeX Gyre Chorus'" -->

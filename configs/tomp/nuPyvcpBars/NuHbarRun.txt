@@ -1,9 +1,9 @@
 to run a config using the new pyvcp bar widgets
-is like othe configs
+is like other configs
 
-you will create an .ini, a custon.hal, and xnl
+you will create an .ini, a custom.hal, and xnl
 and
-uf you want graphical thumbs ( the marker that moves aloong the bar)
+if you want graphical thumbs ( the marker that moves aloong the bar)
  you will need to create a small python tkinter .py file that draws the marker
  ( and set the tag' dwgf to that file spec )
  or creates/copy a suitible png file

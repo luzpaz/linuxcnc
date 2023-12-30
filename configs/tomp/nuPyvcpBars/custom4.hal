@@ -61,7 +61,7 @@ net r6 rand9.6.rout 	bars.proc06 bars.fproc06
 net r7 rand9.7.rout 	bars.proc07 bars.fproc07
 
 # bars can have internal numeric displays or none
-#  there are pins to wire the val;ues to external displays in any case
+# there are pins to wire the values to external displays in any case
 
 net r8   rand9.8.rout 	    bars.proc08      bars.proc08value
 net min8 bars.proc08.minpin bars.proc08min

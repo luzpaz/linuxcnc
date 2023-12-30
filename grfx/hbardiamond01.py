@@ -4,10 +4,10 @@
 # scratch py to see if spreadshgett vbar and hnar value are ok
 # 21oct2023 by using a file for the 'thumb' of the pyvcp_widget call bar 
 # the user can make any shape move alonmg the bar's 'rail'(aka elevator)
-# Imagine a musioc clef drawing for volume
-# and a faucet pourinbf water
+# Imagine a music clef drawing for volume
+# and a faucet pouring water
 # or the word "Hz" for frequency
-#    i had to cjeclk. was that Hz or hZ or hz... ok Big H little z
+#    i had to check. was that Hz or hZ or hz... ok Big H little z
 #
 from tkinter import *
 
@@ -38,6 +38,6 @@ def createMarker(self,cw,bh,max_,min_,value):
         width=1        
     )
     #22oct iwhy is the shape filled? its dark
-    # well red works, so the dark color is some default of i set it  dunno how where
-    # buty i see the thumb is BEHIND the raiul!
+    # well red works, so the dark color is some default of i set it dunno how where
+    # but i see the thumb is BEHIND the raiul!
     self.itemconfig(self.marker,fill="red")
